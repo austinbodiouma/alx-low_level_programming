@@ -1,22 +1,20 @@
+#include "holberton.h"
 #include <stdio.h>
-#include <time.h>
-#include <stdlib.h>
+
 /**
- * main - main block
- * Description: prints all single digit numbers of base 10
- * starting from 0, followed by a new line.
- * Return: 0
+ * print_diagsums -  prints sums
+ * @a: a pointer
+ * @size: size
  */
-int main(void)
+void print_diagsums(int *a, int size)
 {
-	char c = 'z';
+	int i, sum1 = 0, sum2 = 0;
 
-	while (c >= 'a')
+	for (i = 0; i < size; i++)
 	{
-		putchar(c);
-		c--;
+		sum1 += *(a + (size * i + i));
+		sum2 += *(a + (size * i + size - 1 - i));
 	}
-
-	putchar('\n');
-	return (0);
+	printf("%d, ", sum1);
+	printf("%d\n", sum2);
 }
