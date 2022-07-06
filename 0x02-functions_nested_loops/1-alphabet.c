@@ -1,15 +1,23 @@
-#include"main.h"
+#include "main.h"
+
 
 /**
- * print_alphabet - utilizes on the _putchar function to print
- *                 the alphabet a - z
-*/
+ * main - Entry point
+ *
+ * Return: nothing, return void
+ */
 
-void print_alphabet(void)
+int main(void)
 {
-	int ch;
+_putchar('_');
+_putchar('p');
+_putchar('u');
+_putchar('t');
+_putchar('c');
+_putchar('h');
+_putchar('a');
+_putchar('r');
+_putchar('\n');
 
-	for (ch = 'a'; ch <= 'z'; ++ch)
-		_putchar(ch);
-	_putchar('\n');
+return (0);
 }
