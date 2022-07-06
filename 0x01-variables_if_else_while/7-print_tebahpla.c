@@ -1,35 +1,22 @@
-nclude <stdio.h>
-
-
-
+#include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 /**
- *
- *  * main - prints the lowercase alphabet in reverse,
- *
- *   * followed by a new line
- *
- *    * Return: Always 0 (Success)
- *
- *     */
-
+ * main - main block
+ * Description: prints all single digit numbers of base 10
+ * starting from 0, followed by a new line.
+ * Return: 0
+ */
 int main(void)
-
 {
+	char c = 'z';
 
-		char ch;
+	while (c >= 'a')
+	{
+		putchar(c);
+		c--;
+	}
 
-
-
-			for (ch = 'z'; ch >= 'a'; ch--)
-
-					{
-
-								putchar(ch);
-
-									}
-
-				putchar('\n');
-
-					return (0);
-
+	putchar('\n');
+	return (0);
 }
