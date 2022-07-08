@@ -1,24 +1,12 @@
 #include "main.h"
 
 /**
- * main - prints Putchar
+ * _isupper - checks if a given input is uppercase
+ * @c: the input to be checked
  *
- * Description: prints _putchar
- *
- * Return: 0 (Success)
+ * Return: 1 or 0 for True or False
  */
-
-int main(void)
+int _isupper(char c)
 {
-	_putchar('_');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
-	_putchar('\n');
-
-	return (0);
+	return ((c >= 'A') && (c <= 'Z'));
 }
