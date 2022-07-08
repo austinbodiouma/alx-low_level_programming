@@ -1,22 +1,40 @@
 #include "main.h"
 
 /**
- * more_numbers - prints numbers between 0 to 14
- * 10 times.
- * Return: no return.
+ *  print_range - print numbers 0 to a given digit
+ * @r: the last number in the range
+ */
+void print_range(int r)
+{
+	int n = 0;
+
+	while (n <= r)
+	{
+		/**
+		 * if it has 2 digits
+		 * then we get the first one
+		 * and print it
+		 */
+		if (n / 10)
+		{
+			_putchar((n / 10) + '0');
+		}
+		_putchar((n % 10) + '0');
+		n++;
+	}
+}
+
+/**
+ * more_numbers - print 0 - 14 10 times
  */
 void more_numbers(void)
 {
-	int i, ch;
+	int i = 0;
 
-	for (i = 0; i < 10; i++)
+	while (i < 10)
 	{
-		for (ch = 0; ch < 15; ch++)
-		{
-			if (ch >= 10)
-				_putchar((ch / 10) + 48);
-			_putchar((ch % 10) + 48);
-		}
+		print_range(14);
+		i++;
 		_putchar('\n');
 	}
 }
