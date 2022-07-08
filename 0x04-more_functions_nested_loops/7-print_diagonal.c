@@ -1,24 +1,38 @@
 #include "main.h"
 
 /**
- * print_diagonal -> printing line
- * @n: integer params
+ * print_diagonal - print diagonal line using the \ symbol
+ * @n: the number of \ to use
  */
-
 void print_diagonal(int n)
 {
-	int x, i;
+	int i, s;
 
-	if (n <= 0)
-		_putchar('\n');
+	if (n > 0)
+	{
+		i = 0;
+		/**
+		 * ensure n = 0,1 will print empty line
+		 * for the rest ensure the spaces before \ are regulated
+		 */
+		while (i < n)
+		{
+			if (n >= 1)
+			{
+				s = 0;
+				while (s < i)
+				{
+					_putchar(' ');
+					s++;
+				}
+				_putchar('\\');
+				_putchar('\n');
+			}
+			i++;
+		}
+	}
 	else
 	{
-		for (x = 0; x < n; x++)
-		{
-			for (i = 0; i < x; i++)
-				_putchar(' ');
-			_putchar(92);
-			_putchar('\n');
-		}
+		_putchar('\n');
 	}
 }
