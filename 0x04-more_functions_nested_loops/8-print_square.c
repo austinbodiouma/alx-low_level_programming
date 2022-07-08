@@ -1,23 +1,27 @@
 #include "main.h"
+
 /**
- * print_square -> printing line
- * @size: integer params
+ * print_square - print square shape using # sign
+ * @size: the dimensions of our square
  */
 void print_square(int size)
 {
-	int x, y;
+	int i, j;
 
-	if (size <= 0)
-		_putchar('\n');
-	else
+	i = size - 1;
+	while (i >= 0)
 	{
-		for (x = 0; x < size; x++)
+		j = size - 1;
+		while (j >= 0)
 		{
-			for (y = 0; y < size; y++)
-			{
-				_putchar(35);
-			}
-			_putchar('\n');
+			_putchar('#');
+			j--;
 		}
+		_putchar('\n');
+		i--;
+	}
+	if (size <= 0)
+	{
+		_putchar('\n');
 	}
 }
